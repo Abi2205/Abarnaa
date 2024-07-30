@@ -447,13 +447,8 @@ section{
         flex-direction: column;
     }
 }
-#menu-icon {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-    z-index: 1001;
-}
+
+
 @media(max-width:968px){
     section{
         padding: 8em 15%;
@@ -491,6 +486,7 @@ section{
     #menu-icon{
         display: block;
     }
+
     @media (max-width: 768px) {
         nav {
             padding: 1em 5%;
@@ -509,7 +505,7 @@ section{
             align-items: center;
             justify-content: center;
             gap: 2em;
-            transition: 0.3s;
+            transition: left 0.3s;
         }
     
         .links.active {
@@ -519,10 +515,7 @@ section{
         .links a {
             font-size: 2em;
         }
-        .links .active{
-            display: flex;
-        }
-    
+       
         .btn-box {
             flex-direction: column;
             align-items: center;
@@ -534,6 +527,26 @@ section{
         }
         .footer ul{
             font-size: 1.1rem;
+        }
+    }
+    @media (min-width: 769px) {
+        .links {
+            position: static;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            backdrop-filter: none;
+            display: flex;
+            flex-direction: row;
+            gap: 1em;
+        }
+    
+        .links a {
+            font-size: 1em;
+        }
+    
+        #menu-icon {
+            display: none;
         }
     }
 
